@@ -1,6 +1,6 @@
 --- ----------- 
 --- ----------- IF TXT is on GOOGLE DRIVE please write the FILEID here 
-set FILEID 18x3UWBeNnsAEM1BowKbf_p-QFI68AUUG
+set FILEID ---YOUR-GOOGLE-DRIVE-ID-33CHAR--
 set FILENAME jw-in-1.txt
 set VERFILLOC VERSION-SERVEUR.TXT
 set VERURL https://jw-in-1.com/www-update/version.html
@@ -12,17 +12,17 @@ set ZoomExe  Zoom\bin\Zoom.exe
 set ZoomNu -1 /a
 --- -------------------------Variables Zoom-------------------------
 --- perso
-set Log[0] 81289216430
-set Pwd[0] 81600
+set Log[0] VVVVVVVVVVV
+set Pwd[0] TTTTT
 --- reunion
-set Log[1] 5679349497
-set Pwd[1] 810051
+set Log[1] WWWWWWWWWW
+set Pwd[1] XXXXXX
 --- predication
-set Log[2] 93765171804
-set Pwd[2] 012414
+set Log[2] YYYYYYYYYY
+set Pwd[2] ZZZZZZ
 --- support JW-IN-1
-set Log[3] 2316628081
-set Pwd[3] 2414
+set Log[3] XXXXXXXXX
+set Pwd[3] YYYYYY
 --- --------------------------Variables MENU------------------------
 set MenuSecond 20
 set LMenu Z,S,O

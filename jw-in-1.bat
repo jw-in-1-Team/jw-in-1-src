@@ -5,7 +5,7 @@ set Local=no
 set MenuCount=0
 set LocalDateStart=20200101
 set LocalDateEnd=20330101
-SET VERSIONLOCAL=version1.43
+SET VERSIONLOCAL=version1.50
 ECHO ===========================================================
 ECHO ===========           JW-IN-1 %VERSIONLOCAL%       ===========
 ECHO ===========================================================

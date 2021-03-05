@@ -1,0 +1,71 @@
+--- ----------- 
+--- ----------- IF TXT is on GOOGLE DRIVE please write the FILEID here 
+set FILEID --PUT-YOUR-OUWN-ID-GOOGLE
+set FILENAME jw-in-1.txt
+set VERFILLOC VERSION-SERVEUR.TXT
+set VERURL https://jw-in-1.com/www-update/version.html
+set VERSERP https://jw-in-1.com/www-update/
+set VERSERF version.html
+--- -------------------------Executable Zoom------------------------
+--- set Zoom  "%APPDATA%\Zoom\bin_00\Zoom.exe"
+set ZoomExe  Zoom\bin\Zoom.exe
+set ZoomNu -1 /a
+--- -------------------------Variables Zoom-------------------------
+--- perso
+set Log[0] XXXXXXXXXXX
+set Pwd[0] YYYYYY
+--- reunion
+set Log[1] WWWWWWWWWWW
+set Pwd[1] ZZZZZZZ
+--- predication
+set Log[2] YYYYYYYYYYYY
+set Pwd[2] TTTTTTT
+--- support JW-IN-1
+set Log[3] XXXXXXXXXXXX
+set Pwd[3] WWWWWWW
+--- --------------------------Variables MENU------------------------
+set MenuSecond 20
+set LMenu Z,S,O
+set Choose[Z] 0,1,2,3
+set Menu[Z][0] Zoom Ami/Famille
+set Menu[Z][1] Zoom Reunion
+set Menu[Z][2] Zoom Predication
+set Menu[Z][3] Zoom Support JW-IN-1
+set Choose[S] N,F,M,S,P
+set Menu[S][N] NEWS - DERNIERES NOUVEAUTES
+set Menu[S][M] MUSIQUE
+set Menu[S][F] FILM
+set Menu[S][S] SPECIAL - ASSEMBLEE ou AUTRE FILM ENREGISTRE EN LOCAL
+set Menu[S][P] PROGRAMME VARIE
+set Choose[O] D,Q
+set Menu[O][D] TEXTE DU JOUR
+set Menu[O][Q] QUITTER, NE RIEN LANCER
+set ECHOChoose JW-IN-1 a CHOISI 
+set ECHOPress CHOISIR UN MENU SI LE CHOIX de JW-IN-1 NE VOUS CONVIENT PAS!
+--- ----------------       NO OTHER SET below this ligne 
+--- ------------------- zoom perso tous les jours de la semaine
+--- # A B C D
+--- A number of ZOOM 0 private 1 meeting 2 preaching
+--- B numero of day 0 sunday 1 monday .... 6 saturday -- sunday can be 7
+--- C starting minutes 10:20AM = 60*10 +20 = 620
+--- D end minutes 20:45 = 60*20 +45 = 1245  
+# 0 0 1050 1140
+# 0 1 1050 1140
+# 0 2 1050 1140
+# 0 3 1050 1140
+# 0 4 1050 1140
+# 0 5 1050 1140
+-- zoom réunion de semaine --
+# 1 3 1140 1290
+-- zoom réunion de weekend --
+-- # 0 0 540 615
+# 1 6 1080 1230
+-- zoom prédication de semaine après midi --
+# 2 1 810 1020
+# 2 2 990 1020
+# 2 3 810 1020
+# 2 4 840 1020
+-- zoom prédication de semaine matin --
+# 2 0 570 720
+# 2 5 570 720
+# 2 6 570 720

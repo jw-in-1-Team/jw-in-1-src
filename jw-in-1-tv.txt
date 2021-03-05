@@ -1,0 +1,50 @@
+--- ----------- IF TXT is on GOOGLE DRIVE please write the FILEID here 
+set FILEIDTV ---PUT_YOUR_OWN-ID-GOOGLE
+set FILENAMETV jw-in-1-tv.txt
+--- -----------VARIABLE PROGRAM LOCAL SPECIAL NOT INCLUDE ---------
+--- PUT MORE DAY BEFORE AND AFTER AT LEAST 1
+--- DATE NON INCLUSE si la fin est le dimanche metais le lundi au moins!
+--- DATEF FORMAT YYYYMMDD 
+set LocalDateStart 20210208 
+set LocalDateEnd 20210215
+set LocalFolder ..\jw-in-1-DOWNLOAD
+--- -----------------------VARIABLE STREAMING --------------------
+set VLC "C:\Program Files\VideoLAN\VLC\vlc.exe"
+set JWB jw-scripts-master
+set JWBReturn ..
+--- si 1 langue mettre la meme lettre aux 2 langues
+set StreamLang1 F
+set StreamLang2 F
+set WebLang fr
+set ChannelDefault VODStudio
+--- -------------------PROGRAMME PRIORITY FIRST 
+--- # A B C D
+--- A name of categories 
+--- B numero of day 0 sunday 1 monday .... 6 saturday -- sunday can be 7 - $ all days 
+--- C starting minutes 7:30AM = 60*7 +30 = 450
+--- D end minutes 20:45 = 60*20 +45 = 1245  
+--- -----------------------PROGRAMME NEWS MATIN 7:30-8:30 ---------
+set TVshortcut N
+@ LatestVideos  $ 450 510
+--- -----------------------PROGRAMME NEWS MIDI 12:30-13:30 ---------
+@ LatestVideos  $ 750 810
+--- -----------------------PROGRAMME NEWS MATIN 16:30-17:30 --------
+@ LatestVideos  $ 990 1050
+--- -----------------------PROGRAMME STREAMING MUSIC 8:30 11:00  -----
+set TVshortcut M
+@ VODMusicVideos $ 510 630
+--- -----------------------PROGRAMME STREAMING FILM 19:30 24:00  -----
+set TVshortcut F
+@ VODMovies $ 1170 1320
+--- --------------PROGRAMME CHAQUE JOUR DIFFERENT STREAMING FILM 11:00  -----
+set TVshortcut P
+@ VODFamily,VODTeenagers 1 660 1170
+@ VODProgramsEvents 2 660 1170
+@ VODMinistry 3 660 1170
+@ VODOurOrganization 4 660 1170
+@ VODStudio 5 660 1170
+@ VODOurActivities,VODIntExp 6 660 1170
+@ VODChildren,VODBible 0 660 1170
+--- --------------PROGRAMME NUIT TOUS 22:00 6:00  -----
+@ VODMusicVideos,VODMovies,VODProgramsEvents,VODTeenagers,VODMinistry $ 0 720 
+@ VODOurOrganization,VODStudio,VODOurActivities,VODIntExp,VODFamily,VODChildren,VODFamily $ 720 1440

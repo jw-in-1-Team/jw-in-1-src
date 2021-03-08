@@ -22,7 +22,7 @@ Only 2 steps:
 
 # The installation
 
-Please see the [wiki]https://github.com/jw-in-1-Team/JW-IN-1/wiki and [website](https://www.jw-in-1.com/) for video of presetation 
+Please see the [wiki(https://github.com/jw-in-1-Team/jw-in-1-src/wiki) and [website](https://www.jw-in-1.com/) for video of presetation 
 
 
 #### Is this legal?

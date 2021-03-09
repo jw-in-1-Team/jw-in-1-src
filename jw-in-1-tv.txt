@@ -1,5 +1,5 @@
 --- ----------- IF TXT is on GOOGLE DRIVE please write the FILEID here 
-set FILEIDTV ---PUT_YOUR_OWN-ID-GOOGLE
+set FILEIDTV ---PUT--YOUR-OWN-GOOGLE-ID-FOR-AUTOMATIC-SYNCHRO---
 set FILENAMETV jw-in-1-tv.txt
 --- -----------VARIABLE PROGRAM LOCAL SPECIAL NOT INCLUDE ---------
 --- PUT MORE DAY BEFORE AND AFTER AT LEAST 1
@@ -13,6 +13,7 @@ set VLC "C:\Program Files\VideoLAN\VLC\vlc.exe"
 set JWB jw-scripts-master
 set JWBReturn ..
 --- si 1 langue mettre la meme lettre aux 2 langues
+--- same letter if same language ie:E for English
 set StreamLang1 F
 set StreamLang2 F
 set WebLang fr

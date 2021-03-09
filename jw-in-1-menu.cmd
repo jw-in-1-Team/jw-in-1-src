@@ -21,8 +21,6 @@ ECHO     %ECHOChoose% %JW-IN-1-CHOOSE%           %JW-IN-1-CHOOSE%           %JW-
 ECHO ===========================================================
 ECHO %EchoPress%
 ECHO ===========================================================
-REM GAETAN supprimer cette ligne
-
 choice /T %MenuSecond% /C %CHOO% /D %JW-IN-1-CHOOSE%
 set JW-IN-1-CHOOSE-USER=!CHO[%ERRORLEVEL%]!
 set /A MenuCount=%MenuCount%+1

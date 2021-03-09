@@ -25,6 +25,12 @@ if not "%LocalFolder%" =="" (
 	>nul 2>nul dir /a-d /s "%LocalFolder%\*" && ( set LOCALVIDEO=YES) || ( set LOCALVIDEO=NO)
 )
 REM ---------------------------- PRIORITY --------
+REM ---------------------------- 0 ASSEMBLY---
+if "%ChooseDefaultV%"=="A" (
+	set JW-IN-1-CHOOSE=%ChooseDefaultV%
+	goto CalculEnd
+	)
+)
 REM -----------------------------1 ZOOM 
 if not "%ChooseDefaultZ%" == "-2" (
 	set JW-IN-1-CHOOSE=%ChooseDefaultZ%

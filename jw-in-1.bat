@@ -56,7 +56,13 @@ IF "%FILENAMETV%" == "" (set aaa=1) ELSE (
 call jw-in-1-calcul.cmd
 call jw-in-1-update.cmd
 call jw-in-1-menu.cmd
-REM  ----- PRIORITY 0 : LOCAL VIDEO -----
+
+REM  ----- PRIORITY 0 : ASSEMBLY URL ----
+if "%JW-IN-1-CHOOSE-USER%"=="A" (
+	start msedge.exe --kiosk %UrlEdge% --edge-kiosk-type=fullscreen
+	GOTO MeetingEnd
+)
+REM  ----- PRIORITY 1 : LOCAL VIDEO  -----
 if "%JW-IN-1-CHOOSE-USER%"=="S" (
 	:Priority0
 	ECHO ===========================================================
@@ -65,7 +71,7 @@ if "%JW-IN-1-CHOOSE-USER%"=="S" (
 	CALL %VLC% %LocalFolder%\ --fullscreen --video-on-top --sub-autodetect-file
 	if InternetStatut==YES (GOTO ReadyToAnother) ELSE (GOTO SearchInternet)
 )
-REM  ----- PRIORITY 1 : QUIT -----------
+REM  ----- PRIORITY 2 : QUIT -----------
 if "%JW-IN-1-CHOOSE-USER%"=="Q" (GOTO MeetingEnd)
 REM  ----- PRIORITY3 : ZOOM sinon VLC ------
 FOR %%z in (%Choose[Z]%) DO (

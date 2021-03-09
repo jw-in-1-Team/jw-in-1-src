@@ -65,8 +65,9 @@ set ECHOPress CHOISIR UN MENU SI LE CHOIX de JW-IN-1 NE VOUS CONVIENT PAS!
 # 2 6 570 720
 --- -----------------------ASSEMBLY JW STUDIO STREAM ---------------
 -- ~ YYYYMMDD B C URL
---- A number of ZOOM 0 private 1 meeting 2 preaching
---- C starting in minutes 10:20AM = 60*10 +20 = 620
---- D end in minutes 20:45 = 60*20 +45 = 1245  
+-- ~ YYYYMMDD B C URL
+--- YYYYMMDD YYYY Year/Annee MM MOIS/MONTH DD Day/jour
+--- B starting in minutes 10:20AM = 60*10 +20 = 620
+--- C end in minutes 20:45 = 60*20 +45 = 1245  
 --- URL ex: https://studio.stream.jw.org/t/......
 ~ 20210309 570 1000 https://studio.stream.jw.org/t/put----the--complete-url-

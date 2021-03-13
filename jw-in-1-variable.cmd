@@ -1,6 +1,8 @@
-REM V1.4 modification ZZZ for Zoom log 
+REM V1.52 modification ZZZ for Zoom log 
 REM ------------------------- RECUP VARIABLE --------------------------------
 ECHO ===========VV===========VV========VV=============VV========
+set notfound~=True
+set notfound@=True
 FOR /F "usebackq tokens=* delims= eol=-" %%s in (%FileSetup%) do (
 	set t=%%s
 	for /f "tokens=1,2,3,4*" %%a in ("!t!") do (
@@ -10,31 +12,35 @@ FOR /F "usebackq tokens=* delims= eol=-" %%s in (%FileSetup%) do (
 		set Array[3]=%%d
 		set Array[4]=%%e
 	) 
-	if !Array[0]!==~ ( 
-		if %mydate% == !Array[1]! (
-			set /a A3= !Array[2]!
-			if !mytime! GEQ !A3! (
-				set /a A4= !Array[3]!
-				if !A4! GEQ !mytime! ( 
-					set ChooseDefaultV=A
-					set UrlEdge=!Array[4]!
+	if !Array[0]!==~ (
+		if !notfound~!==True (
+			if %mydate% == !Array[1]! (
+				set /a A3= !Array[2]!
+				if !mytime! GEQ !A3! (
+					set /a A4= !Array[3]!
+					if !A4! GEQ !mytime! ( 
+						set ChooseDefaultV=A
+						set UrlEdge=!Array[4]!
+						set set notfound~=False
+					)  
 				)
-			goto VideoLaunch  
 			)
 		)
 	) ELSE (
-		if !Array[0]!==# ( 
-			if !DoW!==!Array[2]! (
-				set /a A3= !Array[3]!
-				if !mytime! GEQ !A3! (
-					set /a A4= !Array[4]!
-					if !A4! GEQ !mytime! (
-						For /l %%Z in (!Array[1]!,1,!Array[1]!) do ( 
-							set /a ZoomNu=%%Z
-							set ChooseDefaultZ=%%Z
-						)
-					goto VideoLaunch 
-					) 
+		if !Array[0]!==# (
+			if !notfound@!==True (
+				if !DoW!==!Array[2]! (
+					set /a A3= !Array[3]!
+					if !mytime! GEQ !A3! (
+						set /a A4= !Array[4]!
+						if !A4! GEQ !mytime! (
+							For /l %%Z in (!Array[1]!,1,!Array[1]!) do ( 
+								set /a ZoomNu=%%Z
+								set ChooseDefaultZ=%%Z
+								set notfound@=False
+							)
+						) 
+					)
 				)
 			)
 		) ELSE (

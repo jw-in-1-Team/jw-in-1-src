@@ -1,3 +1,5 @@
+version 1.52 - 13 mars 2021
+	debug calcul.cmd for jw studio assembly live during other meeting
 VERSION 1.51 - 9 MARS 2021
 	VERSION WITH JW STUDIO for ASSEMBLY LIVE 
 VERSION 1.5 - 5 MARS 2021
